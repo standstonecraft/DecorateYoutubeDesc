@@ -1,0 +1,13 @@
+{
+  "name": "DecorateYoutubeDesc",
+  "version": "1.0.0",
+  "description": "Improve Youtube description. Run on Temparmonkey",
+  "main": "index.js",
+  "repository": "https://github.com/standstonecraft/DecorateYoutubeDesc.git",
+  "author": "standstonecraft",
+  "license": "MIT",
+  "private": false,
+  "devDependencies": {
+    "gulp": "^4.0.2"
+  }
+}

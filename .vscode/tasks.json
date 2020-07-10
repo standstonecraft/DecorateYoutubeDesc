@@ -1,0 +1,13 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"type": "gulp",
+			"task": "oneFile",
+			"problemMatcher": [
+				"$gulp-tsc"
+			],
+			"label": "gulp: oneFile"
+		}
+	]
+}

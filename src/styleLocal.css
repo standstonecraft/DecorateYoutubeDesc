@@ -1,0 +1,90 @@
+.miy-trendList {
+  color: gold;
+  margin-left: 4px;
+  text-decoration: none;
+}
+.miy-hashtag {
+  margin-left: 3px;
+  color: gold;
+  text-decoration: none;
+}
+.miy-splitted-title {
+  display: inline;
+}
+.miy-thumbnailLink {
+  margin-left: 6px;
+  text-decoration: none;
+}
+.miy-downloadLink {
+  margin-left: 6px;
+  text-decoration: none;
+  color: black;
+  padding: 0 1rem 0 1rem;
+  background-color: white;
+  border-radius: 1rem;
+}
+.miy-liveState-streaming {
+  border-width: medium;
+  border-color: #ff4e45;
+  border-style: solid;
+  border-radius: 4px;
+  color: #ff4e45;
+  font-size: 0.8em;
+  margin-left: 8px;
+  padding-left: 4px;
+  padding-right: 4px;
+  text-decoration: none;
+}
+.miy-liveState-scheduled {
+  border-width: medium;
+  border-color: #ffd600;
+  border-style: solid;
+  border-radius: 4px;
+  color: #ffd600;
+  font-size: 0.8em;
+  margin-left: 8px;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+.miy-liveState-archived {
+  border-width: medium;
+  border-color: #646464;
+  border-style: solid;
+  border-radius: 4px;
+  color: #646464;
+  font-size: 0.8em;
+  margin-left: 8px;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+.miy-channelIcon {
+  border-radius: 18px;
+  vertical-align: bottom;
+}
+.miy-channnelLink {
+  margin-left: 1rem;
+  text-decoration: none;
+  display: inline-block;
+}
+.miy-channnelLink > img {
+  background-color: white;
+  border-radius: 4px;
+  padding: 2px;
+  position: relative;
+  vertical-align: text-bottom;
+}
+.miy-channnelLink > span {
+  background-color: white;
+  border-radius: 4px;
+  color: #000000;
+  margin-left: -0.6rem;
+  padding-top: 2px;
+  padding-right: 0.4rem;
+  padding-bottom: 2px;
+  padding-left: 0.7rem;
+  vertical-align: text-bottom;
+}
+.miy-lessButton {
+  cursor: pointer;
+  display: block !important;
+}

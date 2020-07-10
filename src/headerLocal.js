@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name         DecorateYoutubeDesc
-// @namespace    http://tampermonkey.net/
+// @namespace    https://github.com/standstonecraft/DecorateYoutubeDesc
 // @version      0.1
 // @description  Editing date info, thumbnail image link, description link images.
 // @author       Me

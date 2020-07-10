@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         DecorateYoutubeDesc
 // @namespace    https://github.com/standstonecraft/DecorateYoutubeDesc
-// @version      0.1
+// @version      1.0
 // @description  Editing date info, thumbnail image link, description link images.
 // @author       standstonecraft
 // @match        https://www.youtube.com/*

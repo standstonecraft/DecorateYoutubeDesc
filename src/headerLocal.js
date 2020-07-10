@@ -3,7 +3,7 @@
 // @namespace    https://github.com/standstonecraft/DecorateYoutubeDesc
 // @version      0.1
 // @description  Editing date info, thumbnail image link, description link images.
-// @author       Me
+// @author       standstonecraft
 // @match        https://www.youtube.com/*
 // @match        https://twitter.com/explore/tabs/trending
 // @require      http://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js

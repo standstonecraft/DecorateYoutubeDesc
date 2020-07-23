@@ -519,32 +519,38 @@ const decorateYoutubeDesc = () => {
         const userAgent =
           'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.116 Safari/537.36';
         description.querySelectorAll(':scope > a[href^="/redirect"]').forEach(a => {
-          const shURL = decodeURIComponent(splitUrlQueries(a.href).q || '');
-          if (shURL.startsWith('https://t.co/')) {
-            GM.xmlHttpRequest({
-              method: 'GET',
-              url: shURL,
-              headers: { Accept: 'text/xml' },
-              onload: function (data) {
-                const newURL = /URL=(.+?)"/g.exec(data.responseXML.querySelector('noscript').innerHTML)[1];
-                a.href = newURL;
-                a.text = newURL;
-              },
-            });
-          } else if (
-            shURL.startsWith('http://ur2.link/') ||
-            shURL.startsWith('https://bit.ly/') ||
-            shURL.startsWith('http://urx.space')
-          ) {
-            GM.xmlHttpRequest({
-              method: 'GET',
-              url: shURL,
-              headers: { Accept: 'text/xml', 'user-agent': userAgent },
-              onload: function (data) {
-                a.href = data.finalUrl;
-                a.text = data.finalUrl;
-              },
-            });
+          const extractUrl = decodeURIComponent(splitUrlQueries(a.href).q || '');
+          if (extractUrl != '') {
+            const shURL = new URL(extractUrl);
+            switch (shURL.hostname) {
+              case 't.co':
+                GM.xmlHttpRequest({
+                  method: 'GET',
+                  url: shURL,
+                  headers: { Accept: 'text/xml' },
+                  onload: function (data) {
+                    const newURL = /URL=(.+?)"/g.exec(data.responseXML.querySelector('noscript').innerHTML)[1];
+                    a.href = newURL;
+                    a.text = newURL;
+                  },
+                });
+                break;
+              case 'ur2.link':
+              case 'bit.ly':
+              case 'urx.space':
+                GM.xmlHttpRequest({
+                  method: 'GET',
+                  url: shURL,
+                  headers: { Accept: 'text/xml', 'user-agent': userAgent },
+                  onload: function (data) {
+                    a.href = data.finalUrl;
+                    a.text = data.finalUrl;
+                  },
+                });
+                break;
+              default:
+                break;
+            }
           }
         });
       }

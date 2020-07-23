@@ -396,7 +396,9 @@ const decorateYoutubeDesc = () => {
         titleNode.parentNode.append(
           (_ => {
             const link = document.createElement('a');
-            link.href = "https://m.qrqrq.com/?bookmarklet="+encodeURIComponent(location.href.replace('www.youtube.com', 'www.flyoutube.com'));
+            link.href =
+              'https://m.qrqrq.com/?bookmarklet=' +
+              encodeURIComponent(location.href.replace('www.youtube.com', 'www.flyoutube.com'));
             link.target = '_blank';
             link.classList.add('myInsert', 'miy-downloadLink');
             link.append(document.createTextNode('FL'));
@@ -529,7 +531,11 @@ const decorateYoutubeDesc = () => {
                 a.text = newURL;
               },
             });
-          } else if (shURL.startsWith('http://ur2.link/') || shURL.startsWith('https://bit.ly/')) {
+          } else if (
+            shURL.startsWith('http://ur2.link/') ||
+            shURL.startsWith('https://bit.ly/') ||
+            shURL.startsWith('http://urx.space')
+          ) {
             GM.xmlHttpRequest({
               method: 'GET',
               url: shURL,

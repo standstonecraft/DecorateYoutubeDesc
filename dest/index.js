@@ -268,7 +268,7 @@ const decorateYoutubeDesc = () => {
     //#endregion
 
     /** タイトルカッコ内区切り文字 */
-    const TITLE_SPLITTER_IN_PAREN = /[、,＆　\/] ?/g;
+    const TITLE_SPLITTER_IN_PAREN = /[、,＆　／\/] ?/g;
     /** タイトル生放送アイコンテキスト */
     const TITLE_LIVE_ICON_TEXT = 'LIVE';
     /** 一部を表示ボタンテキスト */
